@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid View</title>
+</head>
+<body>
+    <h1>Notification</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h1>Grid View</h1>
+    <table cellspacing="0" cellpadding="0" border="5">
+        <thead>
+            <tr>
+                <th>Notification title</th>
+                <th>Notification text</th>
+                <th>Notification name </th>
+            </tr>
+        </thead>
+        <div>
+        <tbody>
+            {% for person in people %}
+            <tr>
+                <td>{{ person.notification_title }}</td>
+                <td>{{ person.notification_text }}</td>
+                <td>{{ person.notication_name }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+        </tbody>
+    </table>
+</body>
+</html>
