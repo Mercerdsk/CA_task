@@ -35,22 +35,22 @@ To change from PostgreSQL to SQLite change the following in settings.py file
 
  Uncomment the below section,
  
- DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+    DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': BASE_DIR / 'db.sqlite3',
+       }
+   }
 
 and comment the below section,
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': f'{database_name}',
-        'USER': f'{user_name}',
-        'PASSWORD': f'{password}',
-        'HOST': f'{host}',
-        'PORT': f'{port}',
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': f'{database_name}',
+            'USER': f'{user_name}',
+            'PASSWORD': f'{password}',
+            'HOST': f'{host}',
+            'PORT': f'{port}',
+        }
     }
-}
