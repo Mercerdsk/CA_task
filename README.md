@@ -2,9 +2,11 @@
 Task for Customer Analytics
 
 
+CORS Origin is set to ALLOWED FOR ALL
+
 Install the libraries from the requirements.txt file using the below command
  
- pip install -r requirements.txt
+    pip install -r requirements.txt
  
  
 PostgreSQL connection
